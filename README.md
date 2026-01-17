@@ -1,42 +1,25 @@
-# OBrain OConnector - High Scale DropShipping Hub
+# OBrain OConnector
 
-**Live System**: [hub.oconnector.tech](https://hub.oconnector.tech)
+AI orchestration layer responsible for **coordinating specialized AI agents** across the OConnector ecosystem.
 
 ## Overview
-OBrain OConnector is a high-performance, autonomous DropShipping Hub/Aggregator designed to handle massive product catalogs and optimize competitive pricing in real-time. Built on **Cloudflare Workers**, **D1 (SQLite)**, and an Agentic Architecture.
+OBrain functions as the “brain” of the platform, orchestrating multiple AI agents responsible for decision-making, automation, and intelligent workflows.
 
-## Architecture Highlights
+## Key Capabilities
+- Orchestration of multiple specialized agents
+- Context sharing across agents
+- Decision routing and execution
+- Integration with RAG pipelines
 
-### 1. The "Brain" (Autonomous Scheduler)
-The core of the system is `scheduler.ts`, an autonomous cron worker that manages:
-- **Product Lifecycle**: Automatically imports, updates, and deactivates products based on real-time data.
-- **Competitive Intelligence**: 
-    - **Price Watch Agent**: Scans competitors (Mercado Livre, Google Shopping) hourly.
-    - **Dynamic Logic**: Enforces strict visibility rules:
-      > `Active = (Stock > 0) && (Base Price < Competitor Min Price)`
-- **Stock Synchronization**: Hybrid sync with CJ Dropshipping and AliExpress APIs.
+## Architecture
+- Agent-based orchestration
+- Event-driven execution
+- Shared contextual memory
 
-### 2. Pricing Engine
-- **Base Price**: `(Supplier Cost * USD Rate) * Plan Markup`.
-- **Dynamic Shipping**: Calculated at checkout based on user location (Mini Envios / PAC Proxy).
-- **Viability Check**: The system automatically hides products that become uncompetitive due to currency fluctuations or competitor price drops.
+## Tech Stack
+- Backend: TypeScript
+- AI: LLMs, embeddings, RAG
+- Cloud: Serverless runtime
 
-### 3. Agentic Workflow
-- **PriceWatchAgent**: Periodic scanning of competitor prices.
-- **TrendSpotter**: Identifies winning products from social signals (TikTok/Meta).
-- **CopyMaster**: Automated listing enhancement and description generation.
-
-## Technical Stack
-- **Runtime**: Cloudflare Workers (Edge Computing)
-- **Database**: Cloudflare D1 (Distributed SQLite)
-- **Frontend**: React + Vite (Dashboard)
-- **Language**: TypeScript (Strict Mode)
-
-## Documentation Index
-- [System Walkthrough & Logic](./technical_walkthrough.md) - Detailed log of recent architectural decisions.
-- [Implementation Plan](./architecture_plan.md) - Technical roadmap and feature breakdown.
-- [Database Schema](./database_schema.ts) - Complete Drizzle ORM schema definition.
-- [Task History](./task_history.md) - Development log and milestone tracking.
-
----
-*Generated automatically from the OBrain codebase for technical portfolio demonstration.*
+## Status
+Active development and production use.
