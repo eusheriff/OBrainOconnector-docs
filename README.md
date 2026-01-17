@@ -1,20 +1,28 @@
 # OBrain OConnector
 
-AI orchestration layer responsible for **coordinating specialized AI agents** across the OConnector ecosystem.
+🌐 Live Platform  
+https://obot.oconnector.tech
+
+📦 Part of the OConnector Ecosystem  
+https://oconnector.tech
 
 ## Overview
-OBrain functions as the “brain” of the platform, orchestrating multiple AI agents responsible for decision-making, automation, and intelligent workflows.
+OBrain is the **AI orchestration layer** of the OConnector ecosystem, acting as the “brain” that coordinates multiple specialized AI agents.
+
+It is responsible for **decision-making, automation, and intelligent workflow execution** across the platform.
 
 ## Key Capabilities
-- Orchestration of multiple specialized agents
-- Context sharing across agents
+- Multi-agent orchestration
+- Context sharing and memory management
 - Decision routing and execution
 - Integration with RAG pipelines
+- AI-driven business logic
 
 ## Architecture
 - Agent-based orchestration
-- Event-driven execution
+- Event-driven workflows
 - Shared contextual memory
+- Modular and extensible design
 
 ## Tech Stack
 - Backend: TypeScript
@@ -22,4 +30,4 @@ OBrain functions as the “brain” of the platform, orchestrating multiple AI a
 - Cloud: Serverless runtime
 
 ## Status
-Active development and production use.
+Production use with ongoing evolution.
